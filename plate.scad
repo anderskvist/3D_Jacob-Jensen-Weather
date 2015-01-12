@@ -16,26 +16,26 @@ module plate () {
 }
 
 module mounthole () {
-	translate([0,2,-3]) cylinder(4,1,1);
-	translate([0,2,-1]) cylinder(2,3,3);
+	translate([0,2,-3]) cylinder(4,2,2);
+	translate([0,2,-1]) cylinder(2,4,4);
 
-	translate([-1,-2,-3]) cube([2,4,4]);
-	translate([-3,-2,-1]) cube([6,4,2]);
+	translate([-2,-2,-3]) cube([4,4,4]);
+	translate([-4,-2,-1]) cube([8,4,2]);
 
-	translate([0,-2,-3]) cylinder(4,1,1);
-	translate([0,-2,-1]) cylinder(2,3,3);
+	translate([0,-2,-3]) cylinder(4,2,2);
+	translate([0,-2,-1]) cylinder(2,4,4);
 
 }
 
 difference () {
 	union () {
-		translate([0,11,0]) plate();
-		translate([-35,-8,-2]) cube([70,16,2]);
-		translate([0,-11,0]) plate();
-		translate([-35,-24,-2]) cube([70,10,2]);
+		translate([0,21,0]) plate();
+		translate([-35,-18,-2]) cube([70,42-6,2]);
+		translate([0,-21,0]) plate();
+		translate([-35,-34,-2]) cube([70,10,2]);
 	}
-	translate([31,0,0]) rotate([0,45,0]) translate([0,-25,0]) cube([5,40,5]);
-	translate([-31,0,0]) rotate([0,45,180]) translate([0,-15,0]) cube([5,40,5]);
+	translate([31,0,0]) rotate([0,45,0]) translate([0,-35,0]) cube([5,60,5]);
+	translate([-31,0,0]) rotate([0,45,180]) translate([0,-25,0]) cube([5,60,5]);
 
 	translate([-20,-5,0]) mounthole();
 	translate([20,-5,0]) rotate(90,0,0) mounthole();
